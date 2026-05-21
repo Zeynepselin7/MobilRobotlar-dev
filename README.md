@@ -1,14 +1,23 @@
 # Sensör Füzyonu ve Lokalizasyon Kullanarak LiDAR Tabanlı Otonom Navigasyon
-Zeynep Selin Kaptan 21406601043
-Bu proje, Mobil Robotlar dersi kapsamında, sensör füzyonu (Genişletilmiş Kalman Filtresi) ve lokalizasyon algoritmaları kullanılarak, LiDAR donanımlı non-holonomic bir mobil robotun 2B ortamda otonom navigasyonunu gerçekleştirmek üzere geliştirilmiştir.
 
-## Proje İçeriği
-- `main.py`: Simülasyonu, navigasyonu (APF), sensör füzyonunu (EKF) ve görselleştirmeleri çalıştıran ana Python betiği.
-- `Rapor.pdf`: Proje gereksinimlerini, yöntemleri, hata analizlerini (RMSE) ve sonuç grafiklerini içeren detaylı proje raporu.
-- `grafik_sonuclar.png`: Kod çalıştırıldığında otomatik olarak üretilen ve tüm analizleri içeren görsel çıktı.
+**Geliştirici:** Zeynep Selin Kaptan (Öğrenci No: 21406601043])
+**Kurum:** Bursa Teknik Üniversitesi - Mekatronik Mühendisliği Bölümü
 
-## Kurulum ve Çalıştırma Talimatları
-Projeyi yerel ortamınızda çalıştırmak için Python 3.x yüklü olmalıdır. Gerekli kütüphaneleri kurmak için terminalde aşağıdaki komutu çalıştırınız:
+Bu proje, Mobil Robotlar dersi teknik gereksinimleri çerçevesinde, diferansiyel sürüşlü (non-holonomic) otonom bir mobil robotun 2B simülasyon ortamında Yapay Potansiyel Alan (APF) algoritması ile yönlendirilmesini ve Genişletilmiş Kalman Filtresi (EKF) kullanılarak lokalizasyon doğruluğunun iyileştirilmesini içermektedir.
 
+## Sistem Özellikleri ve Mimari
+- **Navigasyon Modeli:** Diferansiyel robot kinematiği kısıtları altında Yapay Potansiyel Alan (APF) reaktif algoritması ile dinamik engelden kaçınma.
+- **Sensör Modellemesi:** Gaussian gürültü karakteristiğine sahip 3 metre mesafe sınırlamalı (thresholding) 2B LiDAR ve tekerlek enkoderi odometrisi simülasyonu.
+- **Sensör Füzyonu:** Kümülatif odometri kayma hatalarını önlemek amacıyla tasarlanmış Genişletilmiş Kalman Filtresi (EKF) tabanlı durum tahmini.
+
+## Proje Dizini Yapısı
+- `main.py`: Simülasyon döngüsünü, EKF algoritmasını koşturan ve 4 alt analiz çıktısını grafik haline getiren ana Python kodu.
+- `Rapor.pdf`: Proje senaryosunu, metodolojiyi, RMSE hata değerlendirmelerini ve akademik atıfları barındıran teslim raporu.
+- `grafik_sonuclar.png`: Simülasyon sonucunda üretilen 4'lü performans analiz çıktısı.
+
+## Çalıştırma Talimatı
+Projenin yerel bilgisayarınızda simüle edilebilmesi için sisteminizde Python 3.x ortamının ve gerekli matematiksel kütüphanelerin bulunması gerekmektedir.
+
+Gerekli paketleri terminal üzerinden kurmak için:
 ```bash
 pip install numpy matplotlib
