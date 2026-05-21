@@ -1,6 +1,6 @@
 # Sensör Füzyonu ve Lokalizasyon Kullanarak LiDAR Tabanlı Otonom Navigasyon
 
-**Geliştirici:** Zeynep Selin Kaptan (Öğrenci No: 21406601043])
+**Geliştirici:** Zeynep Selin Kaptan (Öğrenci No: 21406601043)
 **Kurum:** Bursa Teknik Üniversitesi - Mekatronik Mühendisliği Bölümü
 
 Bu proje, Mobil Robotlar dersi teknik gereksinimleri çerçevesinde, diferansiyel sürüşlü (non-holonomic) otonom bir mobil robotun 2B simülasyon ortamında Yapay Potansiyel Alan (APF) algoritması ile yönlendirilmesini ve Genişletilmiş Kalman Filtresi (EKF) kullanılarak lokalizasyon doğruluğunun iyileştirilmesini içermektedir.
